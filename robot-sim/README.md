@@ -28,7 +28,7 @@ D -- no --> F[go to grab the silver token]
 E --> B
 F --> B
 G -- yes --> H[find the best golden token]
-G -- no --> I[go to release the silver token next to the golden]
+G -- no --> I[go to release the silver token next to the golden and increment paired]
 H --> B
 I --> B
 ```
@@ -67,7 +67,7 @@ Notice that with few changes one may be able to pair the tokens moving only the 
 
 Future improvements
 --------------------------
-The first improvement that comes to my mind is the management of the linear velocity. When the robot goes to grab a token it's speed is (approximately) constant but indeed one may change this fact pretty easily.
+The first improvement that comes to my mind is the management of the linear velocity. When the robot goes to grab a token its speed is (approximately) constant but indeed one may change this fact pretty easily.
 It would be enough to pass to the drive() function a parameter "speed" that is a function of dist-d_th.
 
 Several others improvements could be done, several more parameters regarding the physics of the real world might be added in order to optimize the smoothness of the robots' movements.
