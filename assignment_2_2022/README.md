@@ -5,8 +5,6 @@ The second assignment of research track 1 has been solved by adding 4 python fil
 Client.py and publisher.py implement the solution to question (a).
 Status_service.py implements the solution to question (b).
 
-And this will produce a flow chart:
-
 
 
 How to run it
