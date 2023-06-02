@@ -1,0 +1,279 @@
+<!DOCTYPE html>
+<html class="writer-html5" lang="en" >
+<head>
+  <meta charset="utf-8" /><meta name="generator" content="Docutils 0.17.1: http://docutils.sourceforge.net/" />
+
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Welcome to assignment_2_2022’s documentation! &mdash; assignment_2_2022 1.0 documentation</title>
+      <link rel="stylesheet" href="_static/pygments.css" type="text/css" />
+      <link rel="stylesheet" href="_static/css/theme.css" type="text/css" />
+      <link rel="stylesheet" href="_static/graphviz.css" type="text/css" />
+  <!--[if lt IE 9]>
+    <script src="_static/js/html5shiv.min.js"></script>
+  <![endif]-->
+  
+        <script data-url_root="./" id="documentation_options" src="_static/documentation_options.js"></script>
+        <script src="_static/jquery.js"></script>
+        <script src="_static/underscore.js"></script>
+        <script src="_static/doctools.js"></script>
+    <script src="_static/js/theme.js"></script>
+    <link rel="index" title="Index" href="genindex.html" />
+    <link rel="search" title="Search" href="search.html" /> 
+</head>
+
+<body class="wy-body-for-nav"> 
+  <div class="wy-grid-for-nav">
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search" >
+
+          
+          
+          <a href="#" class="icon icon-home">
+            assignment_2_2022
+          </a>
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" aria-label="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+        </div><div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="Navigation menu">
+              <!-- Local TOC -->
+              <div class="local-toc"><ul>
+<li><a class="reference internal" href="#">Welcome to assignment_2_2022’s documentation!</a></li>
+<li><a class="reference internal" href="#indices-and-tables">Indices and tables</a><ul>
+<li><a class="reference internal" href="#assignment-2-2022-documentation">Assignment_2_2022 documentation</a></li>
+</ul>
+</li>
+<li><a class="reference internal" href="#module-scripts.client">Client Module</a></li>
+<li><a class="reference internal" href="#module-scripts.publisher">Publisher Module</a></li>
+<li><a class="reference internal" href="#module-scripts.status_service">Status_Service Module</a></li>
+<li><a class="reference internal" href="#module-scripts.subscriber">Subscriber Module</a></li>
+</ul>
+</div>
+        </div>
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap"><nav class="wy-nav-top" aria-label="Mobile navigation menu" >
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="#">assignment_2_2022</a>
+      </nav>
+
+      <div class="wy-nav-content">
+        <div class="rst-content">
+          <div role="navigation" aria-label="Page navigation">
+  <ul class="wy-breadcrumbs">
+      <li><a href="#" class="icon icon-home" aria-label="Home"></a></li>
+      <li class="breadcrumb-item active">Welcome to assignment_2_2022’s documentation!</li>
+      <li class="wy-breadcrumbs-aside">
+            <a href="_sources/index.rst.txt" rel="nofollow"> View page source</a>
+      </li>
+  </ul>
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+             
+  <section id="welcome-to-assignment-2-2022-s-documentation">
+<h1>Welcome to assignment_2_2022’s documentation!<a class="headerlink" href="#welcome-to-assignment-2-2022-s-documentation" title="Permalink to this headline"></a></h1>
+<div class="toctree-wrapper compound">
+</div>
+</section>
+<section id="indices-and-tables">
+<h1>Indices and tables<a class="headerlink" href="#indices-and-tables" title="Permalink to this headline"></a></h1>
+<ul class="simple">
+<li><p><a class="reference internal" href="genindex.html"><span class="std std-ref">Indice</span></a></p></li>
+<li><p><a class="reference internal" href="py-modindex.html"><span class="std std-ref">Module Index</span></a></p></li>
+<li><p><a class="reference internal" href="search.html"><span class="std std-ref">Search Page</span></a></p></li>
+</ul>
+<section id="assignment-2-2022-documentation">
+<h2>Assignment_2_2022 documentation<a class="headerlink" href="#assignment-2-2022-documentation" title="Permalink to this headline"></a></h2>
+<p>This is the documentation of the assignment_2_2022 package.
+(This documentation is the first part of the assignment of Research Track 2).</p>
+</section>
+</section>
+<section id="module-scripts.client">
+<span id="client-module"></span><h1>Client Module<a class="headerlink" href="#module-scripts.client" title="Permalink to this headline"></a></h1>
+<span class="target" id="module-client"></span><p>This file implements the main part of point (a) of RT1 assignment.
+It allows the user to set or to cancel a goal.</p>
+<dl class="simple">
+<dt>Subscribes to:</dt><dd><p>/reaching_goal/result</p>
+</dd>
+</dl>
+<dl class="py function">
+<dt class="sig sig-object py" id="scripts.client.goal_callback">
+<span class="sig-prename descclassname"><span class="pre">scripts.client.</span></span><span class="sig-name descname"><span class="pre">goal_callback</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">data</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="_modules/scripts/client.html#goal_callback"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#scripts.client.goal_callback" title="Permalink to this definition"></a></dt>
+<dd><p>A callback that continously check if the goal has been cancelled or reached to set the value of the global variable <code class="docutils literal notranslate"><span class="pre">goal_set_</span></code> to false.
+This allows the user to never cancel a goal and yet been able to set another one if the previous has been reached.</p>
+<p>Args:
+data(PlanningActionResult): the variable needed to know the status of the goal</p>
+</dd></dl>
+
+<dl class="py function">
+<dt class="sig sig-object py" id="scripts.client.main">
+<span class="sig-prename descclassname"><span class="pre">scripts.client.</span></span><span class="sig-name descname"><span class="pre">main</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="reference internal" href="_modules/scripts/client.html#main"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#scripts.client.main" title="Permalink to this definition"></a></dt>
+<dd><p>The main function of the client script and indeed of the assignment. The <code class="docutils literal notranslate"><span class="pre">main()</span></code> function initializes the ROS node
+<code class="docutils literal notranslate"><span class="pre">target_client_py</span></code>. It creates a simple user interface that, in principle, never stops
+(uses <code class="docutils literal notranslate"><span class="pre">while</span> <span class="pre">not</span> <span class="pre">rospy.is_shutdown()</span></code>) and allows the user to set or to cancel a goal. No check on the coordinates is done so the user
+should be careful when setting the goal to set a <em>reachable</em> (i.e. inside the world borders) goal.</p>
+</dd></dl>
+
+<dl class="py function">
+<dt class="sig sig-object py" id="scripts.client.target_client">
+<span class="sig-prename descclassname"><span class="pre">scripts.client.</span></span><span class="sig-name descname"><span class="pre">target_client</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">a</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">b</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="_modules/scripts/client.html#target_client"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#scripts.client.target_client" title="Permalink to this definition"></a></dt>
+<dd><p>A function that set the goal coordinates of the goal ignoring the other fields of the PoseStamped object <code class="docutils literal notranslate"><span class="pre">o</span></code></p>
+<p>Args:
+a: x-coordinate of the goal the user want to set
+b: y-coordinate of the goal the user want to set</p>
+</dd></dl>
+
+</section>
+<section id="module-scripts.publisher">
+<span id="publisher-module"></span><h1>Publisher Module<a class="headerlink" href="#module-scripts.publisher" title="Permalink to this headline"></a></h1>
+<span class="target" id="module-publisher"></span><p>This file implements the second part of point (a) of RT1 assignment.
+It implements a publisher that publishes a custom message <code class="docutils literal notranslate"><span class="pre">(x,y,vel_X,vel_z)</span></code> defined in the msg folder <code class="docutils literal notranslate"><span class="pre">Kinematic.msg</span></code> relying on the values published to the topic /odom. It relies on the Odometry of the robot so in a real application this would be sensitive to noise.</p>
+<dl class="simple">
+<dt>Subscribes to:</dt><dd><p>/odom</p>
+</dd>
+<dt>Publishes to:</dt><dd><p>/chatter</p>
+</dd>
+</dl>
+<dl class="py function">
+<dt class="sig sig-object py" id="scripts.publisher.pub">
+<span class="sig-prename descclassname"><span class="pre">scripts.publisher.</span></span><span class="sig-name descname"><span class="pre">pub</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">data</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="_modules/scripts/publisher.html#pub"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#scripts.publisher.pub" title="Permalink to this definition"></a></dt>
+<dd><p>The callback function of the Subscriber() initialized in the <code class="docutils literal notranslate"><span class="pre">talker()</span></code> function. It publishes an Kinematic object on the topic ‘/chatter’</p>
+<p>Args:
+data(Odometry): position and twist data of the robot as computed via odometry –&gt; some small errors may be present.</p>
+</dd></dl>
+
+<dl class="py function">
+<dt class="sig sig-object py" id="scripts.publisher.talker">
+<span class="sig-prename descclassname"><span class="pre">scripts.publisher.</span></span><span class="sig-name descname"><span class="pre">talker</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="reference internal" href="_modules/scripts/publisher.html#talker"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#scripts.publisher.talker" title="Permalink to this definition"></a></dt>
+<dd><p>This function initializes the ROS node <code class="docutils literal notranslate"><span class="pre">talker</span></code>, subscribes to the topic /odom to retrieve odometry info.
+As a result robot planar position <code class="docutils literal notranslate"><span class="pre">(x,y)</span></code>  linear velocity along its x-axis and rotation along the axis z
+orthogonal to the plane of the robot is published. The published data will be retrieved by the <a class="reference internal" href="#module-scripts.subscriber" title="scripts.subscriber"><code class="xref py py-mod docutils literal notranslate"><span class="pre">scripts.subscriber</span></code></a></p>
+</dd></dl>
+
+</section>
+<section id="module-scripts.status_service">
+<span id="status-service-module"></span><h1>Status_Service Module<a class="headerlink" href="#module-scripts.status_service" title="Permalink to this headline"></a></h1>
+<span class="target" id="module-status_service"></span><p>This file implements point (b) of RT1 assignment.
+It implements a service that when called returns the number of goal reached and cancelled.</p>
+<dl class="simple">
+<dt>Subscribes to:</dt><dd><p>/reaching_goal/result</p>
+</dd>
+</dl>
+<dl class="py function">
+<dt class="sig sig-object py" id="scripts.status_service.callback">
+<span class="sig-prename descclassname"><span class="pre">scripts.status_service.</span></span><span class="sig-name descname"><span class="pre">callback</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">data</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="_modules/scripts/status_service.html#callback"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#scripts.status_service.callback" title="Permalink to this definition"></a></dt>
+<dd><p>This function is the callback of the subscriber to the /reaching_goal/result topic. It updates the number of the goals reached and cancelled.
+To do this it checks for the <em>‘status’</em> of the goal which is a numerical variable in the field status of the type PlanningActionResult.</p>
+<p>Args:
+data(PlanningActionResult): the variable needed to know the status of the goal (reached, cancelled, something else)</p>
+</dd></dl>
+
+<dl class="py function">
+<dt class="sig sig-object py" id="scripts.status_service.my_server">
+<span class="sig-prename descclassname"><span class="pre">scripts.status_service.</span></span><span class="sig-name descname"><span class="pre">my_server</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="reference internal" href="_modules/scripts/status_service.html#my_server"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#scripts.status_service.my_server" title="Permalink to this definition"></a></dt>
+<dd><p>This function is the ‘main’ function of this script. It starts a ROS node <code class="docutils literal notranslate"><span class="pre">my_service_Server</span></code>. It creates 2 global variable that
+will count how many goals have been reached and how many have been cancelled. Then it actually computes these values.</p>
+</dd></dl>
+
+<dl class="py function">
+<dt class="sig sig-object py" id="scripts.status_service.serve">
+<span class="sig-prename descclassname"><span class="pre">scripts.status_service.</span></span><span class="sig-name descname"><span class="pre">serve</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">req</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="_modules/scripts/status_service.html#serve"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#scripts.status_service.serve" title="Permalink to this definition"></a></dt>
+<dd><p>This function is the callback of the service server. It fills the fields of the service ReachedResponse, a custom service.</p>
+<p>Args:
+req(Reached): The request (empty field)</p>
+<p>Returns:
+ReachedResponse(reached,cancelled): The actual response.</p>
+</dd></dl>
+
+</section>
+<section id="module-scripts.subscriber">
+<span id="subscriber-module"></span><h1>Subscriber Module<a class="headerlink" href="#module-scripts.subscriber" title="Permalink to this headline"></a></h1>
+<span class="target" id="module-subscriber"></span><p>This file implements the point (c) of RT1 assignment.
+It implements a subscriber that listens on the topic /chatter and compute the distance of the robot to the goal and the average linear speed of the robot.
+The angular speed is not used even though one may think to print it.
+By design this node should never be run alone as it relies on the definition of print_freq_one. This is the frequency (Hz) the code publishes information. It is get from the ROS parameter server, it is set in this project by assignment2.launch file</p>
+<dl class="simple">
+<dt>Subscribes to:</dt><dd><p>/chatter</p>
+</dd>
+</dl>
+<dl class="py function">
+<dt class="sig sig-object py" id="scripts.subscriber.callback">
+<span class="sig-prename descclassname"><span class="pre">scripts.subscriber.</span></span><span class="sig-name descname"><span class="pre">callback</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">data</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="_modules/scripts/subscriber.html#callback"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#scripts.subscriber.callback" title="Permalink to this definition"></a></dt>
+<dd><p>This function is the callback of the subscriber each time data are published on the topic /chatter
+it updates the internal parameters.
+This function retrieves also the parameters des_pos_x and des_pos_y from the ROS parameter server
+which are updated by the bug_as.py script.
+These parameters always contain the x and the y position of the current goal.</p>
+<p>Args:
+data(Kinematic): the x,y position and linear,angular velocity of the robot</p>
+</dd></dl>
+
+<dl class="py function">
+<dt class="sig sig-object py" id="scripts.subscriber.compute_dist">
+<span class="sig-prename descclassname"><span class="pre">scripts.subscriber.</span></span><span class="sig-name descname"><span class="pre">compute_dist</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">x</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">t_x</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">y</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">t_y</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="_modules/scripts/subscriber.html#compute_dist"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#scripts.subscriber.compute_dist" title="Permalink to this definition"></a></dt>
+<dd><p>A simple function that computes the Euclidean distance between the robot and the goal</p>
+<p>Args:
+x: the x position of the robot
+t_x: the x position of the target (i.e. goal)
+y: the y position of the robot
+t_y: the y position of the target (i.e. goal)</p>
+<p>Returns:
+The distance robot-goal</p>
+</dd></dl>
+
+<dl class="py function">
+<dt class="sig sig-object py" id="scripts.subscriber.listener">
+<span class="sig-prename descclassname"><span class="pre">scripts.subscriber.</span></span><span class="sig-name descname"><span class="pre">listener</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="reference internal" href="_modules/scripts/subscriber.html#listener"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#scripts.subscriber.listener" title="Permalink to this definition"></a></dt>
+<dd><p>This function initializes the ROS node ‘listener’, subscribes to the topic /chatter to retrieve
+odometry info published by <a class="reference internal" href="#module-scripts.publisher" title="scripts.publisher"><code class="xref py py-mod docutils literal notranslate"><span class="pre">scripts.publisher</span></code></a>.
+As a result the distance of the robot to the goal is printed as well as the average speed.</p>
+</dd></dl>
+
+<dl class="py function">
+<dt class="sig sig-object py" id="scripts.subscriber.update_avgspeed">
+<span class="sig-prename descclassname"><span class="pre">scripts.subscriber.</span></span><span class="sig-name descname"><span class="pre">update_avgspeed</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">vel_x</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="_modules/scripts/subscriber.html#update_avgspeed"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#scripts.subscriber.update_avgspeed" title="Permalink to this definition"></a></dt>
+<dd><p>A simple function that updates the average speed computing the arithmetic mean of the samples of the linear speed.
+This is just an approximation based on the hypotesis that between two samples of linear velocity
+the vel_x variable won’t change much.</p>
+<p>Args:
+vel_x: the x velocity of the robot</p>
+</dd></dl>
+
+</section>
+
+
+           </div>
+          </div>
+          <footer>
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>&#169; Copyright 2023, Fabrizio Francesco Leopardi.</p>
+  </div>
+
+  Built with <a href="https://www.sphinx-doc.org/">Sphinx</a> using a
+    <a href="https://github.com/readthedocs/sphinx_rtd_theme">theme</a>
+    provided by <a href="https://readthedocs.org">Read the Docs</a>.
+   
+
+</footer>
+        </div>
+      </div>
+    </section>
+  </div>
+  <script>
+      jQuery(function () {
+          SphinxRtdTheme.Navigation.enable(true);
+      });
+  </script> 
+
+</body>
+</html>
